@@ -20,6 +20,16 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME':'srv08.moon.lan/DSSER',
+        'USER':'WEBSERVICES',
+        'PASSWORD':'WEBSERVICES',
+    }
+}
+
+"""
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': path.join(PROJECT_ROOT, 'db.sqlite3'),
         'USER': '',
@@ -28,6 +38,7 @@ DATABASES = {
         'PORT': '',
     }
 }
+"""
 
 LOGIN_URL = '/login'
 
