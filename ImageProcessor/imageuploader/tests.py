@@ -30,7 +30,7 @@ class SimpleTest(TestCase):
         image.save(tmp_file)
         
         with open(tmp_file, 'rb') as data:
-            responce = client.post('', {'image': data, 'name': "Max Kvt"}, format='multipart')
+            responce = client.post('', {'image': data, 'title': "Max Kvt"}, format='multipart')
 
             print(responce)
 

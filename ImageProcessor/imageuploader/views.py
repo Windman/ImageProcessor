@@ -26,6 +26,10 @@ class PhotoList(APIView):
         try:
             image = request.FILES['image']
             # Image processing here.
+            
+            serializer = PhotoSerializer(data=request.DATA)
+            print(serializer.data)
+
             return Response(status=status.HTTP_201_CREATED)
         except KeyError:
             return Response(status=status.HTTP_400_BAD_REQUEST, data={'detail' : 'Expected image.'})
